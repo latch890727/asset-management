@@ -8,7 +8,7 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.3.0</version>
-    <relativePath/>
+    <relativePath />
   </parent>
 
   <artifactId>asset-management</artifactId>
@@ -72,6 +72,17 @@
             <goals>
               <goal>npm</goal>
             </goals>
+          </execution>
+
+          <execution>
+            <id>npm run build</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <arguments>run dev</arguments>
+            </configuration>
           </execution>
         </executions>
       </plugin>
